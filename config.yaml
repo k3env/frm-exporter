@@ -1,0 +1,5 @@
+web:
+  address: ":2112"
+frm:
+  url: "http://10.149.1.100:8080"
+  scrapeInterval: "1s"
