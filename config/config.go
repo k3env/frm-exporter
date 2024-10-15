@@ -40,7 +40,7 @@ func defaultConfig() Config {
 func LoadConfig(path string, envPrefix string, ignoredArgs ...string) (*Config, error) {
 	cfg := defaultConfig() // Default values
 	var err error
-	if path == "" {
+	if path != "" {
 		err = file.Decode(path, &cfg)
 		if err != nil {
 			return nil, err
