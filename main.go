@@ -62,7 +62,7 @@ func main() {
 	flag.StringVar(&path, "config", "config.yaml", "Path to config file")
 	flag.Parse()
 
-	cfg, err = config.LoadConfig(path)
+	cfg, err = config.LoadConfig(path, "FRM_", "-config")
 	if err != nil {
 		slog.Error("Error loading config:", slog.String("error", err.Error()))
 		os.Exit(1)
